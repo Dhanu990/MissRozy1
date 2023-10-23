@@ -75,7 +75,7 @@ Bot.start()
 loop = asyncio.new_event_loop()
 asyncio.set_event_loop(loop)
 
-PORT = "5000"
+PORT = int(os.environ.get("PORT", 5000))
 
 async def Lazy_start():
     print('\n')
